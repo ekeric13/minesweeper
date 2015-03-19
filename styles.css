@@ -47,11 +47,26 @@ td.bomb {
 }
 
 .smiley-container{
-  padding-left: 30px;
-  padding-right: 30px;
+  position: absolute;
+  top: 0;
+  left: 1rem;
+  right: 1rem;
+}
+
+.board {
+  margin-top: 50px;
 }
 
 .container {
+  position: relative;
+  float: left;
+  text-align: center;
+  width: 315px;
   margin: 0 auto;
-  width: 960px;
+}
+
+.body-container {
+  display: block;
+  margin: 0 auto;
+  width: 315px;
 }
