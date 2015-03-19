@@ -246,7 +246,7 @@ var Game = {
             throw new Error('Too many bombs');
         }
 
-        if(options.skipConfirm || confirm("Are you sure?")) {
+        if(options.skipConfirm || confirm("Are you sure you want to start a new game?")) {
             Board.reset(rows, colls, numBombs).draw();
             $(".smiley")[0].src="http://www.sireasgallery.com/iconset/minesweeper/Smiley1.ico";
             $('#status').html("Playing").addClass("alert-info").removeClass("alert-success").removeClass("alert-error");
