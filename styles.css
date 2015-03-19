@@ -1,0 +1,57 @@
+td {
+  border:1px solid #ccc;
+  border-color: rgb(238, 238, 238) rgb(153, 153, 153) rgb(153, 153, 153) rgb(238, 238, 238);
+  padding:7px 10px;
+  width:15px;
+  text-align:center;
+  cursor:pointer;
+  font:bold 16px arial;
+  background-color: #E4E4E4;
+}
+
+td.mark {
+  color: red;
+  background-color: rgb(204, 204, 204);
+  border-color: rgb(187, 187, 187);
+}
+
+td.one {
+  color: blue;
+  background-color: rgb(204, 204, 204);
+  border-color: rgb(187, 187, 187);
+}
+
+td.two {
+  color: green;
+  border-color: rgb(187, 187, 187);
+  background-color: rgb(204, 204, 204);
+}
+
+td.three {
+  color: red;
+  background-color:#ccc;
+}
+
+td.four {
+  color: purple;
+  background-color:#ccc;
+}
+
+td.bomb {
+  color: yellow;
+}
+
+.lost td.bomb{
+  color: red;
+  background-color: black;
+}
+
+.smiley-container{
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.container {
+  margin: 0 auto;
+  width: 960px;
+}
