@@ -33,7 +33,10 @@ Cell.prototype.setValue = function(value){
             el.addClass('three');
             break;
         case 4:
-            el.addClass('three');
+            el.addClass('four');
+            break;
+        case 5:
+            el.addClass('five');
             break;
         case "X":
             el.addClass('bomb');

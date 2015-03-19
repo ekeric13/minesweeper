@@ -29,12 +29,20 @@ td.two {
 
 td.three {
   color: red;
-  background-color:#ccc;
+  border-color: rgb(187, 187, 187);
+  background-color: rgb(204, 204, 204);
 }
 
 td.four {
   color: purple;
-  background-color:#ccc;
+  border-color: rgb(187, 187, 187);
+  background-color: rgb(204, 204, 204);
+}
+
+td.five {
+  color: orange;
+  border-color: rgb(187, 187, 187);
+  background-color: rgb(204, 204, 204);
 }
 
 td.bomb {
