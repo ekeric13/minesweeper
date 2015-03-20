@@ -52,6 +52,8 @@ td.bomb {
 .lost td.bomb{
   color: red;
   background-color: black;
+    padding:7px 10px;
+  width:15px;
 }
 
 .smiley-container{

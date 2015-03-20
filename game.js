@@ -95,6 +95,7 @@ Cell.prototype.mark = function() {
 var Board = {
     board: [],
     bombStack: {},
+    click: 0,
     reset: function(rows, colls, numBombs) {
         var x, y, row, self = this;
 
@@ -103,7 +104,7 @@ var Board = {
 
         this.board = []; // reset the board
         this.bombStack = {}; // reset our current bomb stack
-
+        this.click = 0;
         this.generateBombs(numBombs);
 
         // build the data structure
@@ -160,10 +161,15 @@ var Board = {
         }
     },
     reveal: function(cell, passive){
+      this.click++;
         cell.reveal(this.validate, this);
         if(cell.isBomb) {
+          if (this.click === 1){
+            alert("Don't click here, bomb!");
+          } else {
             this.checkBombs();
             Game.complete();
+          }
         }
     },
     getCell: function(x,y) {
@@ -187,8 +193,11 @@ var Board = {
     checkBombs: function(){
         this.traversCells(function(cell) {
             if(cell.isBomb) {
+              // if (this.click === 1) {
+                // [0][0].setValue("X")
+              // }
                 cell.setValue("X");
-            }
+              }
         });
     },
     getCellByEvent: function(e) {
@@ -224,7 +233,6 @@ var Game = {
         el.removeClass('active');
         if(!win) {
             el.addClass('lost');
-            console.log("here");
             $(".smiley")[0].src="http://www.buttonempire.com.au/media/catalog/product/cache/1/image/1200x1200/9df78eab33525d08d6e5fb8d27136e95/s/m/smiley-frowny-face_17913_.jpg";
         }
         this.over = true;
